@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+#graph {
+  width: 100vw;
+  height: 100vh;
+}
+
+.node-group {
+  cursor: pointer;
+}
+
+.node-rect {
+  rx: 8;
+  fill: #313244;
+  stroke: #89b4fa;
+  stroke-width: 1.5;
+  transition: filter 0.15s;
+}
+
+.node-rect:hover {
+  filter: brightness(1.3);
+}
+
+.node-rect.entry {
+  stroke: #a6e3a1;
+  stroke-width: 2;
+}
+
+.node-label {
+  fill: #cdd6f4;
+  font-size: 13px;
+  font-weight: 600;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
+.node-meta {
+  fill: #6c7086;
+  font-size: 10px;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
+.link {
+  fill: none;
+  stroke: #45475a;
+  stroke-width: 1.5;
+}
+
+.link-arrow {
+  fill: #45475a;
+}
+
+#tooltip {
+  position: fixed;
+  background: #181825;
+  border: 1px solid #45475a;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  max-width: 260px;
+  z-index: 100;
+}
+
+#tooltip .tooltip-title {
+  color: #89b4fa;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+#tooltip .tooltip-section {
+  color: #a6adc8;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#tooltip .tooltip-item {
+  color: #cdd6f4;
+  margin-left: 8px;
+  line-height: 1.6;
+}
+
+#tooltip .prop-required {
+  color: #f38ba8;
+}
+
+#tooltip .prop-optional {
+  color: #a6e3a1;
+}
+
+#tooltip .emit-item {
+  color: #fab387;
+}
+
+#empty {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #6c7086;
+}
+
+#empty .empty-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+#empty p {
+  font-size: 14px;
+}
