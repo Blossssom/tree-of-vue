@@ -52,6 +52,30 @@ body {
   text-anchor: middle;
 }
 
+.node-section-title {
+  fill: #a6adc8;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  dominant-baseline: middle;
+}
+
+.node-item {
+  fill: #cdd6f4;
+  font-size: 11px;
+  dominant-baseline: middle;
+}
+
+.node-item.prop-required {
+  fill: #f38ba8;
+}
+.node-item.prop-optional {
+  fill: #a6e3a1;
+}
+.node-item.emit-item {
+  fill: #fab387;
+}
+
 .link {
   fill: none;
   stroke: #45475a;
